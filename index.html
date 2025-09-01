@@ -3,38 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Casa - Chatbot Casalino</title>
+  <title>La Casa - Casalino, ton coloc IA</title>
   <style>
+    @font-face {
+      font-family: 'Editorial-Regular';
+      src: ur[](https://lacasa.io/assets/fonts/Editorial-Regular.eot);
+      src: ur[](https://lacasa.io/assets/fonts/Editorial-Regular.otf) format('opentype'),
+           ur[](https://lacasa.io/assets/fonts/Editorial-Regular.woff) format('woff');
+    }
+
+    @font-face {
+      font-family: 'NeueHaasGrotesk';
+      src: ur[](https://lacasa.io/assets/fonts/Neue-Haas-Grotesk-55.otf) format('opentype');
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
     }
 
     body {
-      background-color: #fefbdb;
+      background-color: #f8f6f2;
       color: #000000;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      font-family: 'NeueHaasGrotesk', sans-serif;
+    }
+
+    .important {
+      font-family: 'Editorial-Regular', sans-serif;
     }
 
     header {
-      background-color: #000000;
+      background-color: #fefbdb;
       padding: 20px;
       text-align: center;
-      color: #fefbdb;
+      color: #000000;
     }
 
     header h2 {
       font-size: 1.8em;
+      font-family: 'Editorial-Regular', sans-serif;
     }
 
     header p {
       font-size: 1em;
       margin-top: 5px;
-      color: #fced00;
+      color: #000000;
     }
 
     main {
@@ -51,28 +68,50 @@
       font-size: 2.5em;
       margin-bottom: 15px;
       color: #000000;
+      font-family: 'Editorial-Regular', sans-serif;
     }
 
     .intro-text {
       font-size: 1.2em;
       margin-bottom: 30px;
-      color: #7f5438;
-      max-width: 700px;
-    }
-
-    .values-list {
-      list-style: none;
-      margin-bottom: 40px;
-      text-align: left;
-      max-width: 600px;
-    }
-
-    .values-list li {
-      font-size: 1.1em;
       color: #000000;
-      margin: 10px 0;
-      position: relative;
-      padding-left: 30px;
+      max-width: 700px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    .values-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
+      max-width: 1200px;
+    }
+
+    .value-card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 20px;
+      margin: 10px;
+      width: 250px;
+      text-align: left;
+      color: #000000;
+    }
+
+    .value-card .icon {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .value-card h3 {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      font-family: 'Editorial-Regular', sans-serif;
+    }
+
+    .value-card p {
+      font-size: 1em;
     }
 
     .cta-button {
@@ -90,15 +129,15 @@
     }
 
     footer {
-      background-color: #000000;
-      color: #fefbdb;
+      background-color: #fefbdb;
+      color: #000000;
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
     }
 
     footer a {
-      color: #fced00;
+      color: #000000;
       text-decoration: none;
     }
 
@@ -115,7 +154,7 @@
         font-size: 1em;
       }
 
-      .values-list li {
+      .value-card h3 {
         font-size: 1em;
       }
 
@@ -132,28 +171,47 @@
 </head>
 <body>
   <header>
-    <h2>Casalino</h2>
-    <p>Ton coloc IA, toujours dispo chez La Casa</p>
+    <h2 class="important">Casalino</h2>
+    <p>Ton coloc IA, toujours prêt à t'aider chez La Casa</p>
   </header>
 
   <main>
-    <h1>Rencontrez Casalino, votre assistant La Casa</h1>
+    <h1 class="important">Vivez l'aventure La Casa avec Casalino à tes côtés</h1>
     <p class="intro-text">
-      Une question sur la vie en coloc, une galère, ou juste besoin d’un coup de main ?
-      Casalino est là pour t’aider à tout moment
+      T'en as marre des galères quotidiennes en coloc ? Une question sur ton espace, un besoin de conseils pour la vie en communauté, ou juste envie de discuter ? Casalino, ton pote IA bienveillant, est là pour te filer un coup de main instantané et sans jugement.
     </p>
-    <ul class="values-list">
-      <li>⭐ <strong>Disponibilité :</strong> il est à l’écoute 24h/24, 7j/7, sans café.</li>
-      <li>⭐ <strong>Chaleur :</strong> il répond comme un vrai coloc bienveillant.</li>
-      <li>⭐ <strong>Clarté :</strong> des infos utiles, sans prise de tête.</li>
-      <li>⭐ <strong>Complicité :</strong> pas besoin de mots parfaits, il comprend.</li>
-      <li>⭐ <strong>Autonomie :</strong> pose ta question, il s’occupe du reste.</li>
-    </ul>
-    <a href="#" class="cta-button" onclick="window.HubSpotConversations.widget.open()">Parler à Casalino</a>
+    <div class="values-container">
+      <div class="value-card">
+        <div class="icon">⭐</div>
+        <h3 class="important">Disponible H24</h3>
+        <p>Pas besoin d'attendre, il est toujours online, prêt à répondre sans pause café.</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">⭐</div>
+        <h3 class="important">Super sympa</h3>
+        <p>Comme un vrai coloc chill qui te parle avec chaleur et compréhension.</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">⭐</div>
+        <h3 class="important">Direct au but</h3>
+        <p>Des réponses claires, pratiques, sans blabla inutile pour simplifier ta vie.</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">⭐</div>
+        <h3 class="important">Intuitif</h3>
+        <p>Pas la peine de formuler parfaitement, il capte tes vibes et tes questions du tac au tac.</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">⭐</div>
+        <h3 class="important">Autonome et pro</h3>
+        <p>Il puise dans notre wiki Notion pour te donner les infos fiables sur ta Casa.</p>
+      </div>
+    </div>
+    <a href="#" class="cta-button" onclick="window.HubSpotConversations.widget.open()">Discute avec Casalino maintenant</a>
   </main>
 
   <footer>
-    <p>La Casa - Votre chez-vous, partout. <a href="https://lacasa.io">En savoir plus</a></p>
+    <p>La Casa - Bien plus qu'une coloc : une aventure humaine. <a href="https://lacasa.io">Découvre-en plus</a></p>
   </footer>
 
   <!-- Start of HubSpot Embed Code -->
