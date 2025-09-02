@@ -29,7 +29,6 @@
         <h3 class="icon">🎯 Direct au but</h3>
         <p>Des réponses claires, pratiques, sans blabla inutile pour simplifier ta vie.</p>
       </div>
-      </div>
       <div class="value-card">
         <div class="icon">🧭 Autonome et pro</div>
         <p>Il puise dans notre wiki Notion pour te donner les infos fiables sur ta Casa.</p>
@@ -38,11 +37,20 @@
     <a href="#" class="cta-button" onclick="window.HubSpotConversations.widget.open()">Discute avec Casalino maintenant</a>
   </main>
   <footer>
-    <p>La Casa - Bien plus qu'une coloc : une aventure humaine. <a href="https://lacasa.io">Découvre-en plus</a></p>
+    <p>La Casa | Bien plus qu'une coloc, une aventure humaine | <a href="https://lacasa.io">Découvre-en plus</a></p>
   </footer>
   
-    <!-- Start of HubSpot Embed Code -->
+  <!-- Start of HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/20030493.js"></script>
   <!-- End of HubSpot Embed Code -->
+
+  <script>
+    document.querySelectorAll('.value-card .icon').forEach(header => {
+      header.addEventListener('hover', () => {
+        const content = header.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
 </html>
