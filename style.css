@@ -1,14 +1,14 @@
 <style>
     @font-face {
       font-family: 'Editorial-Regular';
-      src: ur[](https://lacasa.io/assets/fonts/Editorial-Regular.eot);
-      src: ur[](https://lacasa.io/assets/fonts/Editorial-Regular.otf) format('opentype'),
-           ur[](https://lacasa.io/assets/fonts/Editorial-Regular.woff) format('woff');
+      src: url('https://lacasa.io/assets/fonts/Editorial-Regular.eot');
+      src: url('https://lacasa.io/assets/fonts/Editorial-Regular.otf') format('opentype'),
+           url('https://lacasa.io/assets/fonts/Editorial-Regular.woff') format('woff');
     }
 
     @font-face {
       font-family: 'NeueHaasGrotesk';
-      src: ur[](https://lacasa.io/assets/fonts/Neue-Haas-Grotesk-55.otf) format('opentype');
+      src: url('https://lacasa.io/assets/fonts/Neue-Haas-Grotesk-55.otf') format('opentype');
     }
 
     * {
@@ -28,18 +28,19 @@
 
     .important {
       font-family: 'Editorial-Regular', sans-serif;
+      color: #fefbdb;     
     }
 
     .important2 {
       font-family: 'Editorial-Regular', sans-serif;
-      margin-bottom: 42px ;
+      margin-bottom: 40px;
     }
 
     header {
-      background-color: #fefbdb;
-      padding: 20px;
+      background-color: #2e3836;
+      padding: 24px;
       text-align: center;
-      color: #000000;
+      color:#fefbdb;
     }
 
     header h2 {
@@ -49,8 +50,8 @@
 
     header p {
       font-size: 1em;
-      margin-top: 5px;
-      color: #000000;
+      margin-top: 8px;
+      color: #fefbdb;
     }
 
     main {
@@ -59,24 +60,25 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 40px 20px;
+      padding: 40px 24px;
       text-align: center;
     }
 
     h1 {
       font-size: 2.5em;
-      margin-bottom: 15px;
+      margin-bottom: 16px;
       color: #000000;
       font-family: 'Editorial-Regular', sans-serif;
     }
 
     .intro-text {
       font-size: 1.2em;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
       color: #000000;
-      max-width: 700px;
-      background-color: #ffffff;
-      padding: 20px;
+      max-width: 1200px;
+      width: 100%;
+      background-color: #fefbdb;
+      padding: 24px;
       border-radius: 20px;
       text-align: justify;
     }
@@ -85,61 +87,72 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 40px;
+      gap: 32px;
+      margin: 40px auto;
       max-width: 1200px;
+      width: 100%;
     }
 
     .value-card {
       background-color: #ffffff;
       padding: 16px;
       border-radius: 20px;
-      margin: 16px;
-      width: 250px;
       text-align: left;
       color: #000000;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    .value-card:hover {
+      transform: scale(1.05);
+      background-color: #ebfae0;
     }
 
     .value-card .icon {
       font-size: 1.2em;
       margin-bottom: 16px;
       font-weight: bold;
-
+      cursor: pointer;
     }
 
-    .value-card h3 {
-      font-size: 1.1em;
-      margin-bottom: 10px;
+    .value-card h3.icon {
+      font-size: 1.2em;
+      margin-bottom: 16px;
       font-family: 'Editorial-Regular', sans-serif;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     .value-card p {
       font-size: 1em;
+      display: none;
     }
 
     .cta-button {
       background-color: #fced00;
       color: #000000;
-      padding: 15px 30px;
+      padding: 16px 32px;
       border-radius: 25px;
       font-size: 1.2em;
       text-decoration: none;
-      transition: transform 0.2s ease;
+      transition: background-color 0.4s ease, color 0.4s ease;
     }
 
     .cta-button:hover {
       transform: scale(1.05);
+      background-color: #000000;
+      color: #fced00;
     }
 
     footer {
-      background-color: #fefbdb;
-      color: #000000;
+      background-color: #2e3836;
+      color: #fefbdb ;
       text-align: center;
-      padding: 20px;
+      padding: 24px;
       font-size: 0.9em;
     }
 
     footer a {
-      color: #000000;
+      color: #fefbdb;
       text-decoration: none;
     }
 
@@ -147,7 +160,13 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 900px) {
+      .value-card {
+        flex: 0 0 calc(25% - 24px);
+      }
+    }
+
+    @media (max-width: 899px) {
       h1 {
         font-size: 1.8em;
       }
@@ -156,17 +175,18 @@
         font-size: 1em;
       }
 
-      .value-card h3 {
+      .value-card {
+        flex: 0 0 calc(50% - 16px);
+      }
+
+      .value-card h3.icon {
         font-size: 1em;
       }
 
       .cta-button {
         font-size: 1em;
-        padding: 12px 25px;
+        padding: 16px 24px;
       }
-
-      footer {
-        font-size: 0.8em;
       }
     }
   </style>
