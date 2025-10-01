@@ -83,7 +83,7 @@ h1 {
 .casalino-image {
   width: 75%;
   height: auto;
-  max-width: none;
+  max-width: 75%;
   object-fit: contain;
   transition: transform 0.4s ease;
 }
