@@ -6,24 +6,27 @@
   <link rel="stylesheet" href="style.css">
   <title>La Casa - Casalino, ton coloc IA</title>
 </head>
-</head>
 <body>
   <header>
     <h2 class="important">Casalino</h2>
     <p><i>Ton coloc IA, toujours prêt à t'aider chez La Casa</i></p>
   </header>
-
   <main>
     <h1 class="important2">Vivez l'aventure La Casa avec Casalino à tes côtés</h1>
+    
     <div class="casalino-image-container">
-      <img src="https://www.dropbox.com/scl/fi/f2kql95p3byczres06r3h/Casalino-Design.png?rlkey=tfhxmuan8ybqziwqe5l4a4r59&st=x4rwlrnj&raw=1" 
+      <img src="https://dl.dropboxusercontent.com/scl/fi/f2kql95p3byczres06r3h/Casalino-Design.png?rlkey=tfhxmuan8ybqziwqe5l4a4r59&st=x4rwlrnj" 
            alt="Casalino - Ton coloc IA" 
-           class="casalino-image">
-    </div>    
-    <a href="#" class="cta-button" onclick="openHubSpotWidget()">Discute avec Casalino maintenant</a>
+           class="casalino-image"
+           onerror="this.style.display='none'">
+    </div>
+
+    <button class="cta-button" onclick="openHubSpotWidget()">Discute avec Casalino maintenant</button>
+    
     <p class="intro-text">
       Une question sur ton espace ? Casalino, ton coloc IA bienveillant, est là pour te filer un coup de main instantané et sans jugement !
     </p>
+    
     <div class="values-container">
       <div class="value-card">
         <div class="icon">🏪 Disponible H24</div>
@@ -43,6 +46,7 @@
       </div>
     </div>
   </main>
+  
   <footer>
     <p>La Casa | Bien plus qu'une coloc, une aventure humaine | <a href="https://lacasa.io">Découvre-en plus</a></p>
   </footer>
@@ -50,7 +54,7 @@
   <!-- Start of HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/20030493.js" onerror="console.error('Erreur de chargement du script HubSpot. Vérifiez l\'ID du portail ou la connexion réseau.')"></script>
   <!-- End of HubSpot Embed Code -->
-
+  
   <script>
     function openHubSpotWidget() {
       if (window.HubSpotConversations && window.HubSpotConversations.widget) {
