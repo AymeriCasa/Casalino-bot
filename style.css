@@ -93,7 +93,8 @@
 
     .casalino-image:hover {
       transform: scale(1.05);
-
+    }
+        
     .intro-text {
       font-size: 1.2em;
       margin-bottom: 32px;
