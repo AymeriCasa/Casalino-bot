@@ -240,6 +240,6 @@ footer a:hover {
 
 @media (max-width: 600px) {
   .casalino-image {
-    max-width: 240px;
+    max-width: 70%;
   }
 }
